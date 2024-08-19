@@ -425,22 +425,3 @@
 
 
 })(jQuery, window)
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting the traditional way
-    
-    // Get form values
-    const name = document.getElementById('contact-name').value;
-    const phone = document.getElementById('contact-phone').value;
-    const email = document.getElementById('contact-email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('contact-message').value;
-    
-    // Compose the mailto link
-    const mailtoLink = `mailto:surajprasadrout@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`
-    )}`;
-    
-    // Open the mailto link
-    window.location.href = mailtoLink;
-});
